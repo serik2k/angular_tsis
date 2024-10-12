@@ -2,5 +2,4 @@
 
 participants: 
 Serik Kudaibergenov
-Abdullina Alina
 Nurbek Mauletkhan
