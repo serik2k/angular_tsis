@@ -2,6 +2,7 @@
 resetLinkText="Back To Homepage"></app-not-found>
 
 <div *ngIf="furn" class="container">
+
     <img [src]="furn.imageUrl" [alt]="furn.name" />
 
     <div class="details">
@@ -27,7 +28,7 @@ resetLinkText="Back To Homepage"></app-not-found>
 
         <div class="cook-time">
             <span>
-                Time to cook about <strong>{{furn.cookTime}}</strong> minutes
+                Time to cook about <strong>{{furn.deliveryTime}}</strong> minutes
             </span>
         </div>
 

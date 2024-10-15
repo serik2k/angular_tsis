@@ -5,6 +5,7 @@ import { CartItem } from '../shared/CartItem';
 import { NotFoundComponent } from '../not-found/not-found.component'; 
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-cart-page',
   templateUrl: './cart-page.component.html',
