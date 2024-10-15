@@ -7,5 +7,5 @@ export class Furn{
     stars:number = 0;
     imageUrl!:string;
     origins!:string[];
-    cookTime!:string;
+    deliveryTime!:string;
 }

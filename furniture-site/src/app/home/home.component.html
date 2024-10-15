@@ -5,7 +5,7 @@
     <li *ngFor="let furn of furn">
         <a routerLink="/furn/{{furn.id}}">
             <img [src]="furn.imageUrl" [alt]="furn.name">
-            <div class="header">
+            <div class="content">
                 <span class="name">
                    {{furn.name}}
                 </span>
@@ -20,9 +20,9 @@
                              {{origin}}
                         </span>
                     </div>
-                    <div class="cook-time">
+                    <div class="delivery-time">
                         <span>🕒</span>
-                        {{furn.cookTime}}
+                        {{furn.deliveryTime}}
                     </div>
                 </div>
                 <div class="price">
@@ -30,7 +30,6 @@
                         {{furn.price|currency}}
                     </span>
                 </div>
-          
         </a>
     </li>
 </ul>

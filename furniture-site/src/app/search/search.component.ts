@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
 })
 export class SearchComponent implements OnInit {
 
-  searchTerm: string = ""; 
+  searchTerm: string = ''; 
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 
