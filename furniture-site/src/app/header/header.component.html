@@ -1,10 +1,12 @@
 <header>
-    <div class="container">
-      <a href="#" routerLink="/" class="logo">Food Mine!</a>
-      <nav>
-        <ul>
-          <li><a href="#" routerLink="/cart-page">Cart</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="container">
+    <a href="#" routerLink="/" class="logo">Food Mine!</a>
+    <nav>
+      <ul>
+        <li><a href="#" routerLink="/cart-page">Cart</a></li>
+        <li *ngIf="!isLoggedIn"><a href="#" routerLink="/login">Login</a></li>
+        <li *ngIf="isLoggedIn"><a href="#" (click)="logout()">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

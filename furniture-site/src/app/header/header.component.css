@@ -1,35 +1,52 @@
-header{
+header {
     background: white;
     padding: 0;
     border-bottom: 1px solid #e72929;
 }
 
-a{
-    color:#af1313
+a {
+    color: #af1313;
+    text-decoration: none; /* Remove underline from links */
 }
 
-a:hover{
+a:hover {
     background: #e72929;
     color: white;
 }
 
-.container{
+.container {
     margin: 0 auto;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
+    align-items: center; /* Center vertically */
+    max-width: 1200px; /* Set max width for better alignment */
 }
 
-a.logo{
+a.logo {
     font-weight: bold;
     padding: 1em;
 }
 
-nav ul{
+nav ul {
     list-style-type: none;
     margin: 0;
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for alignment */
+}
+
+nav ul li {
+    margin-left: 20px; /* Add spacing between items */
 }
 
 nav ul li a {
-    padding: 1em;
+    padding: 0.8em 1em; /* Adjust padding for buttons */
     display: inline-block;
+    border-radius: 4px; /* Add rounded corners */
+    transition: background 0.3s; /* Smooth transition on hover */
+}
+
+
+nav ul li a.active {
+    background: #e72929; /* Active link background */
+    color: white;
 }

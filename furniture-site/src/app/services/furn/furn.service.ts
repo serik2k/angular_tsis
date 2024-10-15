@@ -40,7 +40,7 @@ export class FurnService {
         favorite: false,
         origins: ['italy'],
         stars: 4.5,
-        imageUrl: '/assets/images/furns/furn-1_1.jpg',
+        imageUrl: 'images/furns/furn-1_1.jpg',
         tags: ['LivingRoom', 'Kitchen'],
       },
       {
@@ -51,7 +51,7 @@ export class FurnService {
         favorite: true,
         origins: ['persia', 'middle east', 'china'],
         stars: 4.7,
-        imageUrl: '/assets/images/furns/furn-2_1.jpg',
+        imageUrl: 'images/furns/furn-2_1.jpg',
         tags: ['LivingRoom', 'Bedroom'],
       },
       {
@@ -62,7 +62,7 @@ export class FurnService {
         favorite: false,
         origins: ['germany', 'us'],
         stars: 3.5,
-        imageUrl: '/assets/images/furns/furn-3_1.jpg',
+        imageUrl: 'images/furns/furn-3_1.jpg', // saved images in public, chanched path to images
         tags: ['LivingRoom', 'Kitchen','Bedroom'],
       },
       {
@@ -73,7 +73,7 @@ export class FurnService {
         favorite: true,
         origins: ['belgium', 'france'],
         stars: 3.3,
-        imageUrl: '/assets/images/furns/furn-4_1.jpg',
+        imageUrl: 'images/furns/furn-4_1.jpg',
         tags: ['Kitchen'],
       },
       {
@@ -84,7 +84,7 @@ export class FurnService {
         favorite: false,
         origins: ['india', 'asia'],
         stars: 3.0,
-        imageUrl: '/assets/images/furns/furn-5.jpg',
+        imageUrl: 'images/furns/furn-5.jpg',
         tags: ['Bedroom'],
       },
       {
@@ -95,7 +95,7 @@ export class FurnService {
         favorite: false,
         origins: ['italy'],
         stars: 4.0,
-        imageUrl: '/assets/images/furns/furn-6.jpg',
+        imageUrl: 'images/furns/furn-6.jpg',
         tags: ['Bedroom'],
       },
     ];
