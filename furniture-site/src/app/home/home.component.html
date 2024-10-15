@@ -3,7 +3,7 @@
 <app-not-found [visible]="!furn || furn.length <= 0" resetLinkText="Reset Search"></app-not-found>
 <ul>
     <li *ngFor="let furn of furn">
-        <a routerLink="/food/{{food.id}}">
+        <a routerLink="/furn/{{furn.id}}">
             <img [src]="furn.imageUrl" [alt]="furn.name">
             <div class="header">
                 <span class="name">
