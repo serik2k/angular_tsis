@@ -20,7 +20,7 @@ import { StarRatingComponent } from '../star-rating/star-rating.component';
 export class HomeComponent implements OnInit {
 
   furn: Furn[] = [];
-food: any;
+
   constructor(private furnService: FurnService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
