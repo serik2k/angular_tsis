@@ -1,0 +1,41 @@
+<app-not-found [visible]="!furn" notFoundMessage="Product Not Found!"
+resetLinkText="Back To Homepage"></app-not-found>
+
+<div *ngIf="furn" class="container">
+    <img [src]="furn.imageUrl" [alt]="furn.name" />
+
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{furn.name}}
+            </span>
+            <span class="favorite {{furn.favorite?'':'not'}}">
+                ❤
+            </span>
+        </div>
+
+
+        <div class="origins">
+            <span *ngFor="let origin of furn.origins">
+                {{origin}}
+            </span>
+        </div>
+
+        <div class="tags">
+            <app-tags [furnPageTags]="furn.tags" justifyContent="start"></app-tags>
+        </div>
+
+        <div class="cook-time">
+            <span>
+                Time to cook about <strong>{{furn.cookTime}}</strong> minutes
+            </span>
+        </div>
+
+        <div class="price">
+            <span>{{furn.price|currency}}</span>
+        </div>
+
+        <button (click)="addToCart()">Add To Cart</button>
+    </div>
+
+</div>

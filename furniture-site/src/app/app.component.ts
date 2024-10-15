@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from "./header/header.component";
+import { HeaderComponent } from './header/header.component';
+import { RatingModule } from 'ng-starrating';
+
 
 @Component({
   selector: 'app-root',
@@ -10,5 +12,5 @@ import { HeaderComponent } from "./header/header.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'furniture-site';
+  title = 'furn';
 }
