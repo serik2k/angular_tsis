@@ -1,4 +1,4 @@
-div{
+/* div{
     display: flex;
     justify-content: center;
     margin-top: 3rem;
@@ -19,8 +19,8 @@ div input{
 
 div button{
     color: grey;
-    height: 3rem;
-    width: 5rem;
+    /* height: 3rem; */
+    /* width: 5rem;
     font-size: 1rem;
     border-radius: 0 10rem 10rem 0;
     border: none;
@@ -33,4 +33,54 @@ div button{
 div button:hover{
     opacity: 1;
     cursor: pointer;
+} */ 
+
+div {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+div input {
+    border-radius: 10rem 0 0 10rem;
+    border: none;
+    height: 3rem;
+    width: 20rem;
+    background-color: #f1f1f1;
+    padding: 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+}
+
+div button {
+    width: 5rem;
+    font-size: 1rem;
+    border-radius: 0 10rem 10rem 0;
+    border: none;
+    background-color: #e72929;
+    color: white;
+    opacity: 0.8;
+    outline: none;
+}
+
+div button:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.search-container {
+    text-align: center;
+}
+
+.furn-item {
+    margin: 1rem;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.furn-image {
+    max-width: 100%;
+    height: auto;
 }

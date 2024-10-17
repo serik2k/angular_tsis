@@ -1,4 +1,34 @@
-<div>
+<!-- <div>
     <input type="text" placeholder="Search for Furnitur" [(ngModel)]="searchTerm" (change)="search()">
     <button (click)="search()">Search</button>
-</div>
+</div> -->
+<!-- Search bar section -->
+<div>
+    <input
+      [(ngModel)]="searchTerm"
+      type="text"
+      placeholder="Search furniture..."
+    />
+    <button (click)="search()">Search</button>
+  </div>
+  
+  <!-- Search results section -->
+  <div class="search-container">
+    <h2>Search Results for "{{ searchTerm }}"</h2>
+    <div *ngIf="furns.length > 0; else noResults">
+      <div *ngFor="let furn of furns" class="furn-item">
+        <img [src]="furn.imageUrl" alt="{{ furn.name }}" class="furn-image"/>
+        <div class="furn-details">
+          <h3>{{ furn.name }}</h3>
+          <p>Price: {{ furn.price | currency }}</p>
+          <p>Delivery Time: {{ furn.deliveryTime }} days</p>
+          <p>Rating: {{ furn.stars }} stars</p>
+          <p>Origins: {{ furn.origins.join(', ') }}</p>
+        </div>
+      </div>
+    </div>
+    <ng-template #noResults>
+      <p>No results found for "{{ searchTerm }}".</p>
+    </ng-template>
+  </div>
+  
