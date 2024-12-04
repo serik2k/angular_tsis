@@ -33,6 +33,12 @@ export class HeaderComponent {
   ngOnDestroy() {
     this.subscription.unsubscribe(); // Clean up the subscription
   }
+  onMouseEnter() {
+    console.log('Mouse entered');
+  }
+  onMouseLeave() {
+    console.log('Mouse left');
+  }
 }
 
 

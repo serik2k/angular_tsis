@@ -28,7 +28,7 @@ resetLinkText="Back To Homepage"></app-not-found>
 
         <div class="delivery-time">
             <span>
-                Time to cook about <strong>{{furn.deliveryTime}}</strong> minutes
+                Time to deliver about <strong>{{furn.deliveryTime}}</strong> minutes
             </span>
         </div>
 
@@ -37,6 +37,8 @@ resetLinkText="Back To Homepage"></app-not-found>
         </div>
 
         <button (click)="addToCart()">Add To Cart</button>
+        <div (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"></div>
+
     </div>
 
 </div>

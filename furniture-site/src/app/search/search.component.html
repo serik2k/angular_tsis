@@ -1,18 +1,16 @@
-<!-- <div>
-    <input type="text" placeholder="Search for Furnitur" [(ngModel)]="searchTerm" (change)="search()">
-    <button (click)="search()">Search</button>
-</div> -->
-<!-- Search bar section -->
 <div>
     <input
       [(ngModel)]="searchTerm"
       type="text"
       placeholder="Search furniture..."
+      
     />
     <button (click)="search()">Search</button>
+    <div (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"></div>
+
   </div>
   
-  <!-- Search results section -->
+
   <div class="search-container">
     <h2>{{ searchTerm }}</h2>
     <div *ngIf="furns.length > 0; else noResults">

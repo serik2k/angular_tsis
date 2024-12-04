@@ -78,5 +78,11 @@ export class SearchComponent implements OnInit {
     this.furns = this.furnService.getAllFurnBySearchTerm(this.searchTerm);
     console.log(`Furns found: ${this.furns.length}`); // Log how many results are found
   }
+  onMouseEnter() {
+    console.log('Mouse entered');
+  }
+  onMouseLeave() {
+    console.log('Mouse left');
+  }
 }
 

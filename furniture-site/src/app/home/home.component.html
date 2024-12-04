@@ -8,6 +8,7 @@
             <div class="content">
                 <span class="name">
                    {{furn.name}}
+                   <div (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"></div>
                 </span>
                 <span class="favorite {{furn.favorite?'':'not'}}">
                     ❤
@@ -19,6 +20,7 @@
                         <span *ngFor="let origin of furn.origins">
                              {{origin}}
                         </span>
+                        <div (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"></div>
                     </div>
                     <div class="delivery-time">
                         <span>🕒</span>
@@ -29,6 +31,7 @@
                     <span>
                         {{furn.price|currency}}
                     </span>
+                    <div (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"></div>
                 </div>
         </a>
     </li>

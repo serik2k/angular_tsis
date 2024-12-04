@@ -42,4 +42,11 @@ export class FurnPageComponent implements OnInit {
     this.cartService.addToCart(this.furn);
     this.router.navigateByUrl('/cart-page');
   }
+  onMouseEnter() {
+    console.log('Mouse entered');
+  }
+  onMouseLeave() {
+    console.log('Mouse left');
+  }
+  
 }

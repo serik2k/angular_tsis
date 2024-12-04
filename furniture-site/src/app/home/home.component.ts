@@ -33,5 +33,11 @@ export class HomeComponent implements OnInit {
         this.furn = this.furnService.getAll();
     })
   }
+  onMouseEnter() {
+    console.log('Mouse entered');
+  }
+  onMouseLeave() {
+    console.log('Mouse left');
+  }
 
 }

@@ -30,4 +30,10 @@ export class LoginComponent {
       this.errorMessage = 'Invalid login credentials. Please try again.';
     }
   }
+  onMouseEnter() {
+    console.log('Mouse entered');
+  }
+  onMouseLeave() {
+    console.log('Mouse left');
+  }
 }

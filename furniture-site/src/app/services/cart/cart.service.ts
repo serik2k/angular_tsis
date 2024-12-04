@@ -1,10 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { Cart } from '../../shared/Cart';
 import { CartItem } from '../../shared/CartItem';
 import { Furn } from '../../shared/Furn';
 
 @Injectable({
   providedIn: 'root'
+})
+@Component({
+  
+  template: `<div (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">Hover over me</div>`,
 })
 export class CartService {
   private cart:Cart = new Cart();
@@ -31,5 +35,11 @@ export class CartService {
 
   getCart():Cart{
     return this.cart;
+  }
+  onMouseEnter() {
+    console.log('Mouse entered');
+  }
+  onMouseLeave() {
+    console.log('Mouse left');
   }
 }
