@@ -14,7 +14,7 @@
   
   <!-- Search results section -->
   <div class="search-container">
-    <h2>Search Results for "{{ searchTerm }}"</h2>
+    <h2>{{ searchTerm }}</h2>
     <div *ngIf="furns.length > 0; else noResults">
       <div *ngFor="let furn of furns" class="furn-item">
         <img [src]="furn.imageUrl" alt="{{ furn.name }}" class="furn-image"/>
@@ -28,7 +28,7 @@
       </div>
     </div>
     <ng-template #noResults>
-      <p>No results found for "{{ searchTerm }}".</p>
+      <p> {{ searchTerm }}</p>
     </ng-template>
   </div>
   
