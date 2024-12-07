@@ -1,0 +1,32 @@
+{
+    "index": "/index.html",
+    "assetGroups": [
+      {
+        "name": "app-shell",
+        "installMode": "prefetch",
+        "resources": {
+          "files": [
+            "/index.html",
+            "/*.css",
+            "/*.js",
+            "/assets/**"
+          ]
+        }
+      }
+    ],
+    "dataGroups": [
+      {
+        "name": "api-calls",
+        "urls": [
+          "http://localhost:3000/users",
+          "http://localhost:3000/products"
+        ],
+        "cacheConfig": {
+          "strategy": "freshness",
+          "maxSize": 10,
+          "maxAge": "1d"
+        }
+      }
+    ]
+  }
+  

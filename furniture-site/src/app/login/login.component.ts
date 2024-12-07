@@ -18,18 +18,37 @@ export class LoginComponent {
 
   constructor(private router: Router, private authService: AuthService) {} 
 
-  login() {
-    console.log('Login method called');
-    
-    
-    if (this.authService.login(this.username, this.password)) {
-      this.router.navigate(['/']); 
-      this.username = ''; 
-      this.password = ''; 
-    } else {
-      this.errorMessage = 'Invalid login credentials. Please try again.';
-    }
+  // login() {
+  //   this.authService.login(this.username, this.password).subscribe({
+  //     next: (response) => {
+  //       // если логин успешен, перенаправляем на главную страницу
+  //       localStorage.setItem('auth_token', response.token);
+  //       this.router.navigate(['/']);
+  //       this.username = '';
+  //       this.password = '';
+  //     },
+  //     error: (err) => {
+  //       // если произошла ошибка (например, неверные данные)
+  //       this.errorMessage = 'Неверные данные для входа. Попробуйте снова.';
+  //     }
+  //   });
+  // }
+  login(): void {
+    this.authService.login(this.username, this.password).subscribe({
+      next: () => {
+        this.router.navigate(['/']); // Navigate to homepage after login
+        this.username = '';
+        this.password = '';
+      },
+      error: err => {
+        this.errorMessage = 'Invalid username or password.';
+        console.error(err.message);
+      }
+    });
   }
+  
+  
+  
   onMouseEnter() {
     console.log('Mouse entered');
   }

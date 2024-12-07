@@ -1,0 +1,38 @@
+<div>
+    <h2>Manage Users</h2>
+  
+    <!-- Отображение списка пользователей -->
+    <h3>Users List:</h3>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Управление пользователями -->
+    <h3>Create User</h3>
+    <label for="new-id">ID:</label>
+    <input id="new-id" type="number" [(ngModel)]="newUserId" />
+    <label for="new-username">Username:</label>
+    <input id="new-username" type="text" [(ngModel)]="newUsername" />
+    <label for="new-email">Email:</label>
+    <input id="new-email" type="email" [(ngModel)]="newEmail" />
+    <button (click)="addUser()">Add User (POST)</button>
+  
+    <h3>Delete User</h3>
+    <label for="delete-id">ID:</label>
+    <input id="delete-id" type="number" [(ngModel)]="deleteUserId" />
+    <button (click)="deleteUser()">Delete User (DELETE)</button>
+  </div>
+  
